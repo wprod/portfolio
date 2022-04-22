@@ -1,4 +1,4 @@
-import Experience from "../Experience";
+import App from "../App";
 import Environment from "./Environment";
 import Floor from "./Floor";
 import Fox from "./Fox";
@@ -6,7 +6,7 @@ import Resources from "../Utils/Resources";
 import { Scene } from "three";
 
 export default class World {
-  public experience: Experience;
+  public app: App;
   public scene: Scene;
   public resources: Resources;
   public floor?: Floor;
@@ -14,9 +14,9 @@ export default class World {
   public environment?: Environment;
 
   constructor() {
-    this.experience = new Experience();
-    this.scene = this.experience.scene;
-    this.resources = this.experience.resources;
+    this.app = new App();
+    this.scene = this.app.scene;
+    this.resources = this.app.resources;
 
     // Wait for resources
     this.resources.on("ready", () => {

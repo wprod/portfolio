@@ -1,4 +1,4 @@
 import "./style.css";
-import Experience from "./App/Experience";
+import App from "./App/App";
 
-new Experience(document.querySelector("#portfolio") as HTMLCanvasElement);
+new App(document.querySelector("#portfolio") as HTMLCanvasElement);

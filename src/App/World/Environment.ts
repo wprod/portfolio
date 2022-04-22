@@ -1,11 +1,11 @@
 import * as THREE from "three";
-import Experience from "../Experience";
+import App from "../App";
 import { DirectionalLight, Object3D, Scene } from "three";
 import Resources from "../Utils/Resources";
 import Debug from "../Utils/Debug";
 
 export default class Environment {
-  public experience: Experience;
+  public app: App;
   public scene: Scene;
   public resources: Resources;
   public debug: Debug;
@@ -18,10 +18,10 @@ export default class Environment {
   };
 
   constructor() {
-    this.experience = new Experience();
-    this.scene = this.experience.scene;
-    this.resources = this.experience.resources;
-    this.debug = this.experience.debug;
+    this.app = new App();
+    this.scene = this.app.scene;
+    this.resources = this.app.resources;
+    this.debug = this.app.debug;
 
     // Debug
     if (this.debug?.active && this.debug?.ui) {

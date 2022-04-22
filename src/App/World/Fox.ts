@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import Experience from "../Experience";
+import App from "../App";
 import { Group, Scene } from "three";
 import Resources from "../Utils/Resources";
 import Time from "../Utils/Time";
@@ -8,7 +8,7 @@ import { GUI } from "lil-gui";
 import { GLTF } from "three/examples/jsm/loaders/GLTFLoader";
 
 export default class Fox {
-  public experience: Experience;
+  public app: App;
   public scene: Scene;
   public resources: Resources;
   public time: Time;
@@ -19,11 +19,11 @@ export default class Fox {
   public animation: any;
 
   constructor() {
-    this.experience = new Experience();
-    this.scene = this.experience.scene;
-    this.resources = this.experience.resources;
-    this.time = this.experience.time;
-    this.debug = this.experience.debug;
+    this.app = new App();
+    this.scene = this.app.scene;
+    this.resources = this.app.resources;
+    this.time = this.app.time;
+    this.debug = this.app.debug;
 
     // Debug
     if (this.debug.active && this.debug.ui) {

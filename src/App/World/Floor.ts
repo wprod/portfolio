@@ -1,10 +1,10 @@
 import * as THREE from "three";
-import Experience from "../Experience";
+import App from "../App";
 import { CircleGeometry, MeshStandardMaterial, Scene, Texture } from "three";
 import Resources from "../Utils/Resources";
 
 export default class Floor {
-  public experience: Experience;
+  public app: App;
   public scene: Scene;
   public resources: Resources;
   private geometry!: CircleGeometry;
@@ -16,9 +16,9 @@ export default class Floor {
   public mesh: any;
 
   constructor() {
-    this.experience = new Experience();
-    this.scene = this.experience.scene;
-    this.resources = this.experience.resources;
+    this.app = new App();
+    this.scene = this.app.scene;
+    this.resources = this.app.resources;
 
     this.setGeometry();
     this.setTextures();

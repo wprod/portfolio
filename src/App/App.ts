@@ -10,9 +10,9 @@ import Resources from "./Utils/Resources";
 
 import sources from "./sources";
 
-let instance: Experience | null = null;
+let instance: App | null = null;
 
-export default class Experience {
+export default class App {
   public debug!: Debug;
   public canvas!: HTMLCanvasElement;
   public sizes!: Sizes;
@@ -33,7 +33,7 @@ export default class Experience {
 
     // Global access
     // @ts-ignore
-    window.experience = this;
+    window.app = this;
 
     // Options
     this.canvas = _canvas || new HTMLCanvasElement();

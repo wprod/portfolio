@@ -1,10 +1,10 @@
 import * as THREE from "three";
-import Experience from "./Experience";
+import App from "./App";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import Sizes from "./Utils/Sizes";
 
 export default class Camera {
-  public experience: Experience;
+  public experience: App;
   public sizes: Sizes;
   public scene: THREE.Scene;
   public canvas: HTMLCanvasElement;
@@ -12,7 +12,7 @@ export default class Camera {
   public controls!: OrbitControls;
 
   constructor() {
-    this.experience = new Experience();
+    this.experience = new App();
     this.sizes = this.experience.sizes;
     this.scene = this.experience.scene;
     this.canvas = this.experience.canvas;
